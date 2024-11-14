@@ -15,7 +15,7 @@ class MyTester(unittest.TestCase):
         self.assertNotEqual(App.add(10, 20), 4, "Error en la suma")
 
     def test_resta_1(self):
-        self.assertEqual(App.resta(1, -2), -1, "Error en la resta")
+        self.assertEqual(App.resta(2, 1), 1, "Error en la resta")
 
     def test_resta_2(self):
         self.assertEqual(App.resta(10,5 ), 5, "Error en la resta")

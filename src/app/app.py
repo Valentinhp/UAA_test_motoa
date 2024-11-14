@@ -8,19 +8,22 @@ class App:
         """
         return a + b
 
-    def resta(self, a, b):
+    @staticmethod
+    def resta(a, b):
         """
         Resta b de a y retorna el resultado.
         """
         return a - b
 
-    def multiplicacion(self, a, b):
+    @staticmethod
+    def multiplicacion(a, b):
         """
         Multiplica a por b y retorna el resultado.
         """
         return a * b
 
-    def division(self, a, b):
+    @staticmethod
+    def division(a, b):
         """
         Divide a entre b y retorna el resultado.
         Maneja la división por cero levantando una excepción.
@@ -29,8 +32,8 @@ class App:
             raise ValueError("La división por cero no está permitida.")
         return a / b
 
-    # 1. Verifica si una lista contiene un número primo
-    def contiene_numero_primo(self, lista):
+    @staticmethod
+    def contiene_numero_primo(lista):
         """
         Verifica si hay al menos un número primo en la lista.
         Retorna True si hay un número primo, de lo contrario, False.
@@ -50,8 +53,8 @@ class App:
         # Utilizamos any() para verificar si existe al menos un número primo
         return any(es_primo(num) for num in lista)
 
-    # 2. Cuenta los números pares en un rango dado
-    def contar_pares(self, inicio, fin):
+    @staticmethod
+    def contar_pares(inicio, fin):
         """
         Cuenta la cantidad de números pares en el rango desde 'inicio' hasta 'fin' (inclusive).
         Retorna la cantidad de números pares.
@@ -66,8 +69,8 @@ class App:
         # Calculamos la cantidad total de números pares
         return ((ultimo - primero) // 2) + 1
 
-    # 3. Encuentra el número máximo en una lista que sea múltiplo de un valor dado
-    def maximo_multiplo(self, lista, multiplo):
+    @staticmethod
+    def maximo_multiplo(lista, multiplo):
         """
         Encuentra y retorna el valor máximo de la lista que es múltiplo del parámetro 'multiplo'.
         Si no hay múltiplos, retorna None.
@@ -79,8 +82,8 @@ class App:
         except ValueError:
             return None
 
-    # 4. Verifica si una palabra es palíndroma (se lee igual en ambos sentidos)
-    def es_palindromo(self, palabra):
+    @staticmethod
+    def es_palindromo(palabra):
         """
         Verifica si la palabra es un palíndromo (igual al leerla al revés).
         Retorna True si es palíndromo, de lo contrario, False.
@@ -89,16 +92,16 @@ class App:
         palabra_limpia = ''.join(char.lower() for char in palabra if char.isalnum())
         return palabra_limpia == palabra_limpia[::-1]
 
-    # 5. Calcula la suma de los primeros n números impares
-    def suma_primeros_impares(self, n):
+    @staticmethod
+    def suma_primeros_impares(n):
         """
         Calcula y retorna la suma de los primeros 'n' números impares.
         """
         # La suma de los primeros n impares es igual a n al cuadrado
         return n ** 2
 
-    # 6. Verifica si todos los elementos de una lista son únicos
-    def elementos_unicos(self, lista):
+    @staticmethod
+    def elementos_unicos(lista):
         """
         Verifica si todos los elementos de la lista son únicos.
         Retorna True si son únicos, de lo contrario, False.
@@ -106,8 +109,8 @@ class App:
         # Comparamos la longitud de la lista con la longitud de un conjunto de sus elementos
         return len(lista) == len(set(lista))
 
-    # 7. Calcula el factorial de un número sin usar recursión
-    def calcular_factorial(self, numero):
+    @staticmethod
+    def calcular_factorial(numero):
         """
         Calcula y retorna el factorial de 'numero' usando un ciclo.
         """
@@ -118,16 +121,16 @@ class App:
             resultado *= i
         return resultado
 
-    # 8. Cuenta la cantidad de vocales en una cadena
-    def contar_vocales(self, cadena):
+    @staticmethod
+    def contar_vocales(cadena):
         """
         Cuenta y retorna la cantidad de vocales en la cadena.
         """
         vocales = set('aeiouAEIOU')
         return sum(1 for char in cadena if char in vocales)
 
-    # 9. Encuentra el segundo número mayor en una lista
-    def segundo_mayor(self, lista):
+    @staticmethod
+    def segundo_mayor(lista):
         """
         Encuentra y retorna el segundo número más grande en la lista.
         Si no existe, retorna None.
@@ -139,8 +142,8 @@ class App:
         numeros_unicos.remove(max(numeros_unicos))
         return max(numeros_unicos)
 
-    # 10. Calcula la serie de Fibonacci hasta n términos
-    def fibonacci(self, n):
+    @staticmethod
+    def fibonacci(n):
         """
         Genera y retorna una lista con los primeros 'n' términos de la serie de Fibonacci.
         """
