@@ -6,7 +6,7 @@ class App:
         return a+b
 
     def resta(a,b):
-        return 0
+        return a-b
 
     def multiplicacion(a,b):
         return 0
